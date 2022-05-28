@@ -1,0 +1,17 @@
+/* Import CSS */
+@import url("style.css");
+
+/* CSS GUIDE */
+.title_guide h1{
+    text-align: center;
+    font-size: 40px;
+    margin: 50px
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img img{
+    width: 350px;
+}

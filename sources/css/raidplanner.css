@@ -1,0 +1,142 @@
+/* Import CSS */
+@import url("style.css");
+
+/* CSS RAIDPLANNER */
+.title_raid h1{
+    text-align: center;
+    font-size: 40px;
+    margin: 50px
+}
+.title_raid .paragraph{
+    width: 50%;
+    color: var(--white_color);
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+    padding: 20px;
+}
+.card{
+    width: 450px;
+	height: 550px;
+    background-color: #1c1b29;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18);
+    margin: 20px;
+}
+.container{
+    position: relative;
+    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+}
+img{
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+.container:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+.card1>.container:after{
+    background-image: linear-gradient(
+        135deg,
+        rgb(1, 0, 236, 0.7),
+        rgb(251, 54, 244, 0.7)
+    );
+}
+.card2>.container:after{
+    background-image: linear-gradient(
+        135deg,
+        rgb(43, 220, 227, 0.7),
+        rgb(66, 255, 219, 0.7)
+    );
+}
+.card3>.container:after{
+    background-image: linear-gradient(
+        135deg,
+        rgb(255, 171, 29, 0.7),
+        rgb(248, 80, 28, 0.7)
+    );
+}
+.card4>.container:after{
+    background-image: linear-gradient(
+        135deg,
+        rgba(77, 251, 54, 0.7),
+        rgba(105, 4, 4, 0.7)
+    );
+}
+.card5>.container:after{
+    background-image: linear-gradient(
+        135deg,
+        rgba(25, 0, 255, 0.7),
+        rgba(49, 0, 88, 0.7)
+    );
+}
+.card6>.container:after{
+    background-image: linear-gradient(
+        135deg,
+        rgba(238, 223, 9, 0.7),
+        rgba(0, 0, 0, 0.7)
+    );
+}
+.card7>.container:after{
+    background-image: linear-gradient(
+        135deg,
+        rgba(255, 0, 0, 0.7),
+        rgba(1, 0, 71, 0.7)
+    );
+}
+.details{
+    padding: 5px 10px;
+}
+.details>h3{
+    color: var(--white_color);
+    font-weight: 600;
+    font-size: 25px;
+    margin: 10px 0 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.details p{
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.details .infos{
+    color: var(--white_color);
+    margin-bottom: 10px;
+}
+.details .infos h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.details .infos span{
+    font-weight: 900;
+}
+
+/* CSS Responsive */
+@media (max-width:900px){
+	.raid .title_raid h1{
+		font-size: 20px;
+	}
+    .title_raid .paragraph{
+        font-size: 12px;
+    }
+}
+

@@ -1,0 +1,87 @@
+/* Import CSS */
+@import url("style.css");
+
+/* CSS TEAM */
+.team .title_team{
+    margin-top: 60px;
+}
+.team .title_team h1{
+    font-size: 40px;
+    text-align: center;
+}
+.characters{
+    margin-top: 75px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.characters .card{
+	position: relative;
+	width: 500px;
+	height: 350px;
+	display: flex;
+	transition: 0.5s;
+	justify-content: flex-start;
+	align-items: center;
+	background: linear-gradient( 45deg, #1a2f3f, #7094ce);
+	margin: 80px 50px;
+	border-radius: 15px;
+}
+.characters .card .perso{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 400px;
+	transition: 0.5s;
+}
+.characters .card:hover .perso{
+	left: 75%;
+	height: 500px;
+}
+.characters .card .content{
+	position: relative;
+	width: 50%;
+	left: 20%;
+	opacity: 0;
+	visibility: hidden;
+	padding: 0 20px;
+	transition: 0.5s;
+}
+.characters .card:hover .content{
+	left: 0;
+	opacity: 1;
+	visibility: visible;
+}
+.characters .card .content .card_title{
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	line-height: 1em;
+	padding: 20px;
+}
+.characters .card .content .rank{
+    margin-bottom: 10px;
+}
+.characters .card .content p span{
+	font-weight: 900;
+	text-decoration: underline;
+}
+.characters .card .content .icons_job{
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+}
+.characters .card .content .icons_job img{
+	height: 40px;
+}
+
+
+/* CSS Responsive */
+@media (max-width:900px){
+	.team .title_team h1{
+		font-size: 18px;
+	}
+}
