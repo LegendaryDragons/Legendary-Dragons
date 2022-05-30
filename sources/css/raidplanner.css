@@ -126,7 +126,7 @@ img{
     padding-bottom: 10px;
     text-align: center;
 }
-.details .signup{
+.details .signup a{
     margin: 15px 50px 0 50px;
     padding: 10px;
     border: 1px solid var(--blue_color);
@@ -134,7 +134,7 @@ img{
     transition: all 0.5s ease;
     background-color: var(--blue_color);
 }
-.details .signup:hover{
+.details .signup a:hover{
     background-color: rgba(251, 54, 244, 0.7);
     border: 1px solid rgba(251, 54, 244, 0.7);
     letter-spacing: 2px;
