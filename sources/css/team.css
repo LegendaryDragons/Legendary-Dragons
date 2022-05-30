@@ -102,3 +102,33 @@ z-index: -100;
 		font-size: 25px;
 	}
 }
+
+
+@media (max-width:400px){
+	.characters .card{
+		width: 350px;
+		height: 200px;
+		margin: 55px;
+	}
+	.characters .card .perso{
+		height: 250px;
+	}
+	.characters .card:hover .perso{
+		height: 300px;
+	}
+	.characters .card .content .card_title{
+		font-size: 1em;
+		line-height: 1em;
+		padding: 5px;
+	}
+	.characters .card .content .rank{
+		font-size: 12px;
+	}
+	.characters .card .content p span{
+		font-weight: 700;
+		font-size: 12px;
+	}
+	.characters .card .content .icons_job img{
+		height: 25px;
+	} 
+}

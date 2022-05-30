@@ -20,7 +20,6 @@ body{
     font-size: 35px;
 }
 .home .left h1 span{
-    font-size: 40px;
     color: var(--blue_color)
 }
 .home .left p{

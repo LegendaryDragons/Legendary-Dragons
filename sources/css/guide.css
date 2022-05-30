@@ -3,12 +3,13 @@
 
 /* CSS Guide */
 .guide .title_guide{
-    padding-top: 100px;
+    padding-top: 50px;
 	animation: Title_animate 1.5s ease 1.6s 1 normal backwards;
 }
 .guide .title_guide h1{
     font-size: 40px;
     text-align: center;
+    margin-bottom: 30px;
 }
 .title_guide .paragraph{
     width: 50%;  
@@ -34,17 +35,21 @@
     display: flex;
     cursor: pointer;
 }
+.guide .container .card:hover{
+    border: 1px solid rgb(218, 165, 32);
+    box-shadow: 5px 5px 10px 5px rgba(218,165,32,0.1);
+}
 .guide .container .card a{
     filter: grayscale(1);
 }
 .guide .container .card a:hover{
     filter: grayscale(0);
 }
-
 .guide .container .card a .card-img{
     width: 350px;
     display: flex;
     justify-content: center;
+    padding-top: 5px;
 }
 .guide .container .card a .card-img img{
     width: 80px;
@@ -52,6 +57,9 @@
 .guide .container .card a .card-title{
     text-align: center;
     margin: 20px 0;
+}
+.guide .container .card a:hover h3{
+    color: goldenrod;
 }
 .guide .container .card a .card-content{
     padding: 20px;
@@ -67,7 +75,28 @@
 		position: relative;
 		z-index: -99;
 	}
-	.guide .title_team h1{
-		font-size: 25px;
+	.guide .title_guide h1{
+		font-size: 20px;
 	}
+    .title_guide .paragraph{
+        font-size: 12px;
+    }
+}
+
+@media (max-width:400px){
+    .guide .container .card{
+        height: 300px;
+        width: 250px;
+    }
+    .guide .container .card a .card-img{
+        width: 250px;
+    }
+    .guide .container .card a .card-title{
+        font-size: 15px;
+        margin: 10px 0;
+    }
+    .guide .container .card a .card-content{
+        font-size: 11px;
+    }
+
 }
