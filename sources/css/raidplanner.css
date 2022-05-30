@@ -14,7 +14,7 @@
     text-align: center;
     margin: 0 auto;
     font-size: 30px;
-    animation: Title_animate 1.5s ease 1.6s 1 normal backwards;
+    animation: Logo_animate 1.5s ease 1.6s 1 normal backwards;
 }
 .cards{
     display: flex;

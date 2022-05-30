@@ -20,326 +20,58 @@
 .title_gallery .paragraph a{
     color: #45d0e4;
 }
-.month_gallery h2{
+.month-gallery{
+    margin-top: 50px;
     text-align: center;
-    color:#fff;
-    margin: 50px 0;
-    animation: Logo_animate 1.5s ease 1.6s 1 normal backwards;
+    font-size: 25px;
+    animation: Title_animate 1.5s ease 1.6s 1 normal backwards;
 }
-.month_gallery h2 span{
-    color: #45d0e4;
+.month-gallery span{
+    color: var(--blue_color);
 }
-.gallery_box{
-    min-height: 100vh;
-    padding: 0.4rem;
-    margin-bottom: 30px;
-}
-.gallery-wrapper{
+.grid-container {
     display: grid;
-    grid-gap: 0.4rem;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    grid-auto-flow: dense;
+    padding: 15px;
+    margin-top: 30px;
+    animation: Card_animate 2s linear 1.6s 1 normal backwards;
 }
-.gallery-wrapper div{
-    position: relative;
+.grid-container .item {
+    background:#8FF;
+    display:flex;
 }
-.block1{
-    grid-row: 1;
-    grid-column: 1 / span 2;
-    background: url("../image/gallery/ff-1.jpg") center/cover no-repeat;
-    height: 300px;
+.grid-container .item a {
+    display:flex;
+    width:100%;
 }
-.block2{
-    grid-row: 1;
-    grid-column: 3 / span 2;
-    background: url("../image/gallery/ff-2.jpg") center/cover no-repeat;
-    height: 300px;
+.grid-container .item.portrait {
+    grid-row: auto / span 2;
 }
-.block3{
-    grid-row: 1;
-    grid-column: 5 / span 2;
-    background: url("../image/gallery/ff-3.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block4{
-    grid-row: 2;
-    grid-column: 1 / span 3;
-    background: url("../image/gallery/ff-4.jpg") center/cover no-repeat;
-    height: 400px;
-}
-.block5{
-    grid-row: 2;
-    grid-column: 4 / span 3;
-    background: url("../image/gallery/ff-5.jpg") center/cover no-repeat;
-    height: 400px;
-}
-.block6{
-    grid-row: 3;
-    grid-column: 1 / span 2;
-    background: url("../image/gallery/ff-6.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block7{
-    grid-row: 3;
-    grid-column: 3 / span 2;
-    background: url("../image/gallery/ff-7.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block8{
-    grid-row: 3;
-    grid-column: 5 / span 2;
-    background: url("../image/gallery/ff-8.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block9{
-    grid-row: 4;
-    grid-column: 1 / span 3;
-    background: url("../image/gallery/ff-9.jpg") center/cover no-repeat;
-    height: 400px;
-}
-.block10{
-    grid-row: 4;
-    grid-column: 4 / span 3;
-    background: url("../image/gallery/ff-10.jpg") center/cover no-repeat;
-    height: 400px;
-}
-.block11{
-    grid-row: 1;
-    grid-column: 1 / span 2;
-    background: url("../image/gallery/ff-11.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block12{
-    grid-row: 1;
-    grid-column: 3 / span 2;
-    background: url("../image/gallery/ff-12.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block13{
-    grid-row: 1;
-    grid-column: 5 / span 2;
-    background: url("../image/gallery/ff-13.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block14{
-    grid-row: 2;
-    grid-column: 1 / span 3;
-    background: url("../image/gallery/ff-14.jpg") center/cover no-repeat;
-    height: 400px;
-}
-.block15{
-    grid-row: 2;
-    grid-column: 4 / span 3;
-    background: url("../image/gallery/ff-15.jpg") center/cover no-repeat;
-    height: 400px;
-}
-.block16{
-    grid-row: 3;
-    grid-column: 1 / span 2;
-    background: url("../image/gallery/ff-16.jpg") center/cover no-repeat;
-    height: 300px;
+.grid-container .item img {
+    width:100%;
+    height:auto;
+    object-fit:cover;
 }
 
-.block17{
-    grid-row: 1;
-    grid-column: 1 / span 2;
-    background: url("../image/gallery/ff-17.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block18{
-    grid-row: 1;
-    grid-column: 3 / span 2;
-    background: url("../image/gallery/ff-18.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block19{
-    grid-row: 1;
-    grid-column: 5 / span 2;
-    background: url("../image/gallery/ff-19.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block20{
-    grid-row: 2;
-    grid-column: 1 / span 3;
-    background: url("../image/gallery/ff-20.jpg") center/cover no-repeat;
-    height: 400px;
-}
-.block21{
-    grid-row: 2;
-    grid-column: 4 / span 3;
-    background: url("../image/gallery/ff-21.jpg") center/cover no-repeat;
-    height: 400px;
-}
-.block22{
-    grid-row: 3;
-    grid-column: 1 / span 2;
-    background: url("../image/gallery/ff-22.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block23{
-    grid-row: 3;
-    grid-column: 3 / span 2;
-    background: url("../image/gallery/ff-23.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block24{
-    grid-row: 3;
-    grid-column: 5 / span 2;
-    background: url("../image/gallery/ff-24.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block25{
-    grid-row: 4;
-    grid-column: 1 / span 3;
-    background: url("../image/gallery/ff-25.jpg") center/cover no-repeat;
-    height: 400px;
-}
-.block26{
-    grid-row: 4;
-    grid-column: 4 / span 3;
-    background: url("../image/gallery/ff-26.jpg") center/cover no-repeat;
-    height: 400px;
-}
-.block27{
-    grid-row: 1;
-    grid-column: 1 / span 2;
-    background: url("../image/gallery/ff-127.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block28{
-    grid-row: 1;
-    grid-column: 3 / span 2;
-    background: url("../image/gallery/ff-28.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block29{
-    grid-row: 1;
-    grid-column: 5 / span 2;
-    background: url("../image/gallery/ff-29.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.block30{
-    grid-row: 2;
-    grid-column: 1 / span 3;
-    background: url("../image/gallery/ff-30.jpg") center/cover no-repeat;
-    height: 400px;
-}
-.block31{
-    grid-row: 2;
-    grid-column: 4 / span 3;
-    background: url("../image/gallery/ff-31.jpg") center/cover no-repeat;
-    height: 400px;
-}
-.block32{
-    grid-row: 3;
-    grid-column: 1 / span 2;
-    background: url("../image/gallery/ff-32.jpg") center/cover no-repeat;
-    height: 300px;
-}
-.gallery-wrapper div:hover{
-    cursor: pointer;
-}
-.gallery-wrapper div::after{
-    position: absolute;
-    padding-top: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: #d8d8d8;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    display: none;
-}
-.gallery-wrapper div:hover::after{
-    display: block;
-}
-.image-view{
-    position: fixed;
-    top: 20px;
-    bottom: 20px;
-    right: 4%;
-    left: 4%;
-    display: none;
-}
-#cancel-btn{
-    position: absolute;
-    right: 5px;
-    font-size: 2.4rem;
-    cursor: pointer;
-}
 
 /* RESPONSIVE CSS */
-@media screen and (max-width: 992px){
-    .block1{
-        grid-row: 1;
-        grid-column: 1 / 7;
-    }
-    .block2{
-        grid-row: 2;
-        grid-column: 1 / 7;
-    }
-    .block3{
-        grid-row: 3;
-        grid-column: 1 / 7;
-    }
-    .block4{
-        grid-row: 4;
-        grid-column: 1 / 7;
-    }
-    .block5{
-        grid-row: 5;
-        grid-column: 1 / 7;
-    }
-    .block6{
-        grid-row: 6;
-        grid-column: 1 / 7;
-    }  
-    .block7{
-        grid-row: 7;
-        grid-column: 1 / 7;
-    }
-    .block8{
-        grid-row: 8;
-        grid-column: 1 / 7;
-    }
-    .block9{
-        grid-row: 9;
-        grid-column: 1 / 7;
-    }
-    .block10{
-        grid-row: 10;
-        grid-column: 1 / 7;
-    }
-    .block1{
-        grid-row: 11;
-        grid-column: 1 / 7;
-    }
-    .block2{
-        grid-row: 12;
-        grid-column: 1 / 7;
-    }
-    .block3{
-        grid-row: 13;
-        grid-column: 1 / 7;
-    }
-    .block4{
-        grid-row: 14;
-        grid-column: 1 / 7;
-    }
-    .block5{
-        grid-row: 15;
-        grid-column: 1 / 7;
-    }
-    .block6{
-        grid-row: 16;
-        grid-column: 1 / 7;
-    }
-}
-
 @media (max-width:900px){
+    body{
+		z-index: 100;
+		}
+	.gallery{
+		position: relative;
+		z-index: -99;
+	}
 	.gallery .title_gallery h1{
-		font-size: 20px;
+		font-size: 25px;
 	}
     .title_gallery .paragraph{
         font-size: 12px;
+    }
+    .month-gallery{
+        font-size: 20px;
     }
 }
