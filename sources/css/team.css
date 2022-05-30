@@ -2,13 +2,13 @@
 @import url("style.css");
 
 /* CSS TEAM */
-body{
+/* body{
 z-index: -100;
-}
-.team{
+} */
+/* .team{
 	position: relative;
 	z-index: -99;
-}
+} */
 .team .title_team{
     margin-top: 100px;
 	animation: Title_animate 1.5s ease 1.6s 1 normal backwards;
@@ -91,6 +91,13 @@ z-index: -100;
 
 /* CSS Responsive */
 @media (max-width:900px){
+	body{
+		z-index: -100;
+	}
+	.team{
+		position: relative;
+		z-index: -99;
+	}
 	.team .title_team h1{
 		font-size: 25px;
 	}

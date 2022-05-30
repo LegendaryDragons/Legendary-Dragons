@@ -2,13 +2,6 @@
 @import url("style.css");
 
 /* CSS RAIDPLANNER */
-.body{
-    z-index: -100;
-}
-.raid{
-    position: relative;
-	z-index: -99;
-}
 .title_raid h1{
     text-align: center;
     font-size: 40px;
@@ -126,8 +119,11 @@ img{
     padding-bottom: 10px;
     text-align: center;
 }
+.details .signup{
+    margin-top: 20px;
+    width: 100%;
+}
 .details .signup a{
-    margin: 15px 50px 0 50px;
     padding: 10px;
     border: 1px solid var(--blue_color);
     border-radius: 10px;
@@ -157,7 +153,14 @@ img{
 
 /* CSS Responsive */
 @media (max-width:900px){
-	.raid .title_raid h1{
+	body{
+		z-index: -100;
+	}
+	.raid{
+		position: relative;
+		z-index: -99;
+	}
+    .raid .title_raid h1{
 		font-size: 20px;
 	}
     .title_raid .paragraph{

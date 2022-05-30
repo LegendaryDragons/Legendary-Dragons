@@ -2,15 +2,8 @@
 @import url("style.css");
 
 /* CSS Guide */
-.body{
-    z-index: -100;
-}
-.guide{
-    position: relative;
-	z-index: -99;
-}
 .guide .title_guide{
-    margin-top: 100px;
+    padding-top: 100px;
 	animation: Title_animate 1.5s ease 1.6s 1 normal backwards;
 }
 .guide .title_guide h1{
@@ -24,7 +17,6 @@
     margin: 0 auto;
 }
 .guide .container{
-    display: flex;
     display: flex;
 	justify-content: center;
 	align-items: center;
@@ -64,4 +56,18 @@
 .guide .container .card a .card-content{
     padding: 20px;
     text-align: justify;
+}
+
+/* CSS Responsive */
+@media (max-width:900px){
+	body{
+		z-index: -100;
+	}
+	.guide{
+		position: relative;
+		z-index: -99;
+	}
+	.guide .title_team h1{
+		font-size: 25px;
+	}
 }
