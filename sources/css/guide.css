@@ -40,6 +40,7 @@
     width: 350px;
     margin: 20px;
     display: flex;
+    cursor: pointer;
 }
 .guide .container .card a{
     filter: grayscale(1);
