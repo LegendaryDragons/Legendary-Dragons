@@ -2,8 +2,16 @@
 @import url("style.css");
 
 /* CSS TEAM */
+body{
+z-index: -100;
+}
+.team{
+	position: relative;
+	z-index: -99;
+}
 .team .title_team{
-    margin-top: 60px;
+    margin-top: 100px;
+	animation: Title_animate 1.5s ease 1.6s 1 normal backwards;
 }
 .team .title_team h1{
     font-size: 40px;
@@ -16,6 +24,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	animation: Card_animate 1s linear 1.6s 1 normal backwards;
 }
 .characters .card{
 	position: relative;
@@ -36,11 +45,12 @@
 	transform: translateX(-50%);
 	height: 400px;
 	transition: 0.5s;
+
 }
 .characters .card:hover .perso{
 	left: 75%;
 	height: 500px;
-}
+} 
 .characters .card .content{
 	position: relative;
 	width: 50%;
@@ -76,12 +86,12 @@
 }
 .characters .card .content .icons_job img{
 	height: 40px;
-}
+} 
 
 
 /* CSS Responsive */
 @media (max-width:900px){
 	.team .title_team h1{
-		font-size: 18px;
+		font-size: 25px;
 	}
 }

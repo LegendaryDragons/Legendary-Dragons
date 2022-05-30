@@ -2,10 +2,18 @@
 @import url("style.css");
 
 /* CSS RAIDPLANNER */
+.body{
+    z-index: -100;
+}
+.raid{
+    position: relative;
+	z-index: -99;
+}
 .title_raid h1{
     text-align: center;
     font-size: 40px;
-    margin: 50px
+    margin: 50px;
+    animation: Title_animate 1.5s ease 1.6s 1 normal backwards;
 }
 .title_raid .paragraph{
     width: 50%;
@@ -13,6 +21,7 @@
     text-align: center;
     margin: 0 auto;
     font-size: 30px;
+    animation: Title_animate 1.5s ease 1.6s 1 normal backwards;
 }
 .cards{
     display: flex;
@@ -20,6 +29,7 @@
 	align-items: center;
 	flex-wrap: wrap;
     padding: 20px;
+    animation: Card_animate 1s linear 1.6s 1 normal backwards;
 }
 .card{
     width: 450px;
@@ -51,22 +61,22 @@ img{
 .card1>.container:after{
     background-image: linear-gradient(
         135deg,
-        rgb(1, 0, 236, 0.7),
-        rgb(251, 54, 244, 0.7)
+        rgba(1, 0, 236, 0.7),
+        rgba(251, 54, 244, 0.7)
     );
 }
 .card2>.container:after{
     background-image: linear-gradient(
         135deg,
-        rgb(43, 220, 227, 0.7),
-        rgb(66, 255, 219, 0.7)
+        rgba(43, 220, 227, 0.7),
+        rgba(66, 255, 219, 0.7)
     );
 }
 .card3>.container:after{
     background-image: linear-gradient(
         135deg,
-        rgb(255, 171, 29, 0.7),
-        rgb(248, 80, 28, 0.7)
+        rgba(255, 171, 29, 0.7),
+        rgba(248, 80, 28, 0.7)
     );
 }
 .card4>.container:after{
@@ -116,6 +126,20 @@ img{
     padding-bottom: 10px;
     text-align: center;
 }
+.details .signup{
+    margin: 15px 50px 0 50px;
+    padding: 10px;
+    border: 1px solid var(--blue_color);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    background-color: var(--blue_color);
+}
+.details .signup:hover{
+    background-color: rgba(251, 54, 244, 0.7);
+    border: 1px solid rgba(251, 54, 244, 0.7);
+    letter-spacing: 2px;
+}
+
 .details .infos{
     color: var(--white_color);
     margin-bottom: 10px;
@@ -129,6 +153,7 @@ img{
 .details .infos span{
     font-weight: 900;
 }
+
 
 /* CSS Responsive */
 @media (max-width:900px){

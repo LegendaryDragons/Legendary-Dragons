@@ -1,17 +1,66 @@
 /* Import CSS */
 @import url("style.css");
 
-/* CSS GUIDE */
-.title_guide h1{
-    text-align: center;
-    font-size: 40px;
-    margin: 50px
+/* CSS Guide */
+.body{
+    z-index: -100;
 }
-.img{
+.guide{
+    position: relative;
+	z-index: -99;
+}
+.guide .title_guide{
+    margin-top: 100px;
+	animation: Title_animate 1.5s ease 1.6s 1 normal backwards;
+}
+.guide .title_guide h1{
+    font-size: 40px;
+    text-align: center;
+}
+.title_guide .paragraph{
+    width: 50%;
+    color: #fff;
+    text-align: justify;
+    margin: 0 auto;
+}
+.guide .container{
+    display: flex;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+    margin-top: 50px;
+    animation: Logo_animate 1.5s ease 2.5s 1 normal backwards;
+}
+.guide .container .card{
+    border: 1px solid var(--white_color);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 5px rgba(255,255,255,0.1);
+    height: 400px;
+    width: 350px;
+    margin: 20px;
+    display: flex;
+}
+.guide .container .card a{
+    filter: grayscale(1);
+}
+.guide .container .card a:hover{
+    filter: grayscale(0);
+}
+
+.guide .container .card a .card-img{
+    width: 350px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-.img img{
-    width: 350px;
+.guide .container .card a .card-img img{
+    width: 80px;
+}
+.guide .container .card a .card-title{
+    text-align: center;
+    margin: 20px 0;
+}
+.guide .container .card a .card-content{
+    padding: 20px;
+    text-align: justify;
 }

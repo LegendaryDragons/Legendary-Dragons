@@ -14,9 +14,14 @@ body{
 }
 .home .left{
     width: 50%;
+    animation: Title_animate 1.5s ease 1.6s 1 normal backwards;
 }
 .home .left h1{
+    font-size: 35px;
+}
+.home .left h1 span{
     font-size: 40px;
+    color: var(--blue_color)
 }
 .home .left p{
     color: var(--grey_color);
@@ -32,7 +37,7 @@ body{
 .home .left .fa-brands{
     text-decoration: 0;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 20px;
     padding: 10px 20px;
     transition: 0.5s;
 }
@@ -45,6 +50,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 100%;
+    animation: Logo_animate 1.5s ease 1.6s 1 normal backwards;
 }
 .home .right img {
     height: 480px;
