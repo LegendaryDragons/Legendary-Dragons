@@ -1,0 +1,175 @@
+/* Import CSS */
+@import url("style.css");
+
+/* CSS MAIN-ELEMENTS */
+.buttons{
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* animation: Logo_animate 1.5s ease 1.6s 1 normal backwards; */
+}
+.buttons button{
+    margin: 0 5px;
+    padding: 10px;
+    background-color: var(--blue_color);
+    transition: all 0.5s ease-in-out;
+}
+.buttons button:hover{
+    background-color: rgba(251, 54, 244, 0.7);
+}
+.buttons .active{
+    background-color: rgba(251, 54, 244, 0.7);
+}
+.main .title_main{
+    padding-top: 50px;
+	/* animation: Title_animate 1.5s ease 2.5s 1 normal backwards; */
+}
+.main .title_main h1{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.title_main .paragraph{
+    width: 50%;  
+    color: #fff;
+    text-align: justify;
+    margin: 0 auto;
+}
+.universe,
+.world,
+.races{
+    margin-top: 100px;
+    width: 100%;
+    padding: 0 30px;
+}
+.universe h2,
+.world h2,
+.races h2{
+    margin-bottom : 20px;
+    text-decoration: underline;
+    color: var(--blue_color);
+}
+.world .container-world .content{
+	display: flex;
+	flex-direction: column;
+	margin: 50px 0;
+}
+.world .container-world .content h3{
+	text-align: center;
+}
+.world .container-world .content p{
+	text-align: justify;
+	margin-bottom: 5px;
+}
+.world .container-world .content img{
+	width: 60%;
+	margin: 30px auto;
+}
+.races p{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.world h3,
+.races h3{
+    text-decoration: underline;
+    padding-left: 50px;
+}
+.races .presentation-class{
+    padding-left: 50px;
+    text-align: justify;
+}
+.container-race{
+	margin-top: 80px;
+}
+.container{
+    margin-top: 50px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	/* animation: Card_animate 1s linear 1.6s 1 normal backwards; */
+}
+.container .card{
+	position: relative;
+	width: 500px;
+	height: 400px;
+	display: flex;
+	transition: 0.5s;
+	justify-content: flex-start;
+	align-items: center;
+	background: linear-gradient( 45deg, #1a2f3f, #7094ce);
+	margin: 50px;
+	border-radius: 15px;
+}
+.container .card .perso{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 500px;
+	transition: 0.5s;
+}
+.container .card:hover .perso{
+	left: 80%;
+	height: 400px;
+}
+.container .card .content{
+	position: relative;
+	width: 50%;
+	left: 20%;
+	opacity: 0;
+	visibility: hidden;
+	padding: 0 20px;
+	transition: 0.5s;
+}
+.container .card:hover .content{
+	left: 0;
+	opacity: 1;
+	visibility: visible;
+}
+.container .card .content .card_title{
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	line-height: 1em;
+	padding: 20px;
+}
+.container .card .content p{
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+@media (max-width:900px){
+    body{
+		z-index: 100;
+		}
+	.main{
+		position: relative;
+		z-index: -99;
+	}
+	.main .title_main h1{
+		font-size: 25px;
+	}
+    .title_main .paragraph{
+        font-size: 12px;
+    }
+	.universe h2{
+		font-size: 20px;
+	}
+	.container .card{
+		margin-top: 100px;
+	}
+}
+
+@media (max-width:600px){
+    
+}
