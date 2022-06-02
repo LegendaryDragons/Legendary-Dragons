@@ -37,111 +37,223 @@
     text-align: justify;
     margin: 0 auto;
 }
-.universe,
-.world,
-.races{
+.universe, .world,
+.races, .role{
     margin-top: 100px;
     width: 100%;
     padding: 0 30px;
 }
-.universe h2,
-.world h2,
-.races h2{
+.universe h2, .world h2,
+.races h2, .role h2{
     margin-bottom : 20px;
     text-decoration: underline;
     color: var(--blue_color);
 }
-.world .container-world .content{
+.world .container-world{
 	display: flex;
 	flex-direction: column;
-	margin: 50px 0;
+}
+.world .container-world .content{
+	margin: 30px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .world .container-world .content h3{
 	text-align: center;
-}
-.world .container-world .content p{
-	text-align: justify;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 .world .container-world .content img{
 	width: 60%;
-	margin: 30px auto;
+	margin: 0 auto;
+	margin-bottom: 30px;
 }
-.races p{
-    text-align: justify;
-    margin-bottom: 20px;
+.world .content p{
+	text-align: justify;
 }
-.world h3,
-.races h3{
-    text-decoration: underline;
-    padding-left: 50px;
-}
-.races .presentation-class{
-    padding-left: 50px;
-    text-align: justify;
+.presentation-class{
+	margin-bottom: 50px;
 }
 .container-race{
-	margin-top: 80px;
+	margin-top: 50px;
+}
+.container-race h3{
+	text-decoration: underline;
 }
 .container{
-    margin-top: 50px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 80%;
+	margin: 0 auto;
+}
+.card{
 	position: relative;
+	width: 300px;
+	height: 500px;
+	transform-style: preserve-3d;
+	background: white;
+	perspective: 1000px;
+	transform: perspective(2000px);
+	transition: 1s;
+	box-shadow: inset 300px 0 50px rgba(0, 0, 0, .15), 0 20px 20px rgba(0, 0, 0, .15);
+	margin-bottom: 50px;
+}
+.card:hover{
+	transform: perspective(2000px) translateX(50%);
+	box-shadow: inset 20px 0 50px rgba(0, 0, 0, .15), 0 10px 10px rgba(0, 0, 0, .15);
+}
+.card .cover{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: 2;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap;
-	/* animation: Card_animate 1s linear 1.6s 1 normal backwards; */
+	transform-style: preserve-3d;
+	overflow: hidden;
+	transition: 1s ease-in-out;
+	transform-origin: left;
 }
-.container .card{
+.card .cover p{
 	position: relative;
-	width: 500px;
-	height: 400px;
-	display: flex;
-	transition: 0.5s;
-	justify-content: flex-start;
-	align-items: center;
-	background: linear-gradient( 45deg, #1a2f3f, #7094ce);
-	margin: 50px;
-	border-radius: 15px;
-}
-.container .card .perso{
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	height: 500px;
-	transition: 0.5s;
-}
-.container .card:hover .perso{
-	left: 80%;
-	height: 400px;
-}
-.container .card .content{
-	position: relative;
-	width: 50%;
-	left: 20%;
-	opacity: 0;
-	visibility: hidden;
-	padding: 0 20px;
-	transition: 0.5s;
-}
-.container .card:hover .content{
-	left: 0;
-	opacity: 1;
-	visibility: visible;
-}
-.container .card .content .card_title{
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 1.1em;
-	line-height: 1em;
-	padding: 20px;
-}
-.container .card .content p{
+	top: 230px;
+	right: 10px;
+	width: 100px;
 	font-size: 12px;
 }
-
-
+.card:hover .cover{
+	transform: rotateY(-180deg);
+}
+.card .cover::before{
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 150%;
+	background: #fff;
+	transform: rotate(36.5deg);
+	box-shadow: 0 0 0 20px #47bfce;
+	transition: 0.5s;
+	transition-delay: 1s;
+}
+.card:hover .cover::before{
+	width: 0;
+	box-shadow: 0 0 0 250px #47bfce;
+	transform: rotate(143.5deg);
+}
+.card .cover img{
+	width: auto;
+	height: 80%;
+	z-index: 1;
+}
+.card .cover .lalafell{
+	height: 60%;
+}
+.card .details{
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	text-align: center;
+	z-index: 1;
+}
+.card .details h3{
+	text-decoration: underline;
+}
+.card .details p{
+	text-align: justify;
+	padding: 10px;
+	color: black;
+	font-size: 0.8em;
+}
+.card .details h3{
+	font-weight: 500;
+	margin: 5px 0;
+	color: black;
+}
+.container-faq{
+	width: 70%;
+	height: auto;
+	margin: 30px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+.questions{
+	width: 100%;
+	height: auto;
+	margin: 5px;
+}
+.visible-pannel{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #f1f1f1;
+	border-radius: 10px;
+	position: relative;
+	z-index: 100;
+}
+.visible-pannel h3{
+	margin-left: 5px;
+	/* padding: 15px 5px; */
+	font-size: 25px;
+	color: black;
+}
+.visible-pannel .icon-role{
+	display: flex;
+	align-items: center;
+}
+.visible-pannel .icon-role img{
+	width: auto;
+	height: 30px;
+	padding-left: 5px;
+}
+.visible-pannel .svg{
+	margin-right: 10px;
+	width: 25px;
+	cursor: pointer;
+}
+.toggle-pannel{
+	padding: 0 15px;
+	height: 0;
+	opacity: 0;
+	/* background-color: #bebebe; */
+}
+.toggle-pannel p{
+	line-height: 1.5;
+}
+.sub-cat{
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+}
+.sub-cat img{
+	width: auto;
+	height: 30px;
+}
+.sub-cat h4{
+	padding-left: 5px;
+}
+h5{
+	margin: 10px 0;
+	text-decoration: underline;
+	letter-spacing: 1px;
+	font-weight: 400;
+}
+.icon-job{
+	margin-bottom: 20px;
+}
+.icon-job img{
+	width: auto;
+	height: 30px;
+}
 
 
 
@@ -166,10 +278,54 @@
 		font-size: 20px;
 	}
 	.container .card{
-		margin-top: 100px;
-	}
+		margin-top: 50px;
+	} 
 }
 
 @media (max-width:600px){
-    
+	.container-race h3{
+		text-align: center;
+	}
+	.container-race .presentation-class{
+		text-align: justify;
+		font-size: 0.8rem;
+	}
+	.presentation-class{
+		margin-bottom: 10px;
+	}
+	.container{
+		width: 100%;
+		margin: 10px;
+		margin-bottom: 30px;
+		flex-direction: column;
+	}
+	.card{
+		width: 150px;
+		height: 400px;
+		margin: 0 auto;
+	}
+	.card .cover img{
+		height: 50%;
+	}
+	.card .cover .lalafell{
+		height: 40%;
+	}
+	.card .details h3{
+		font-size: 0.8rem;
+	}
+	.card .details p{
+		font-size: 0.6rem;
+	}
+	.toggle-pannel p{
+		font-size: 0.8rem;
+	}
+	.icon-role h3{
+		font-size: 1.2rem;
+	}
+	.visible-pannel .icon-role img{
+		height: 20px;
+	}
+	.visible-pannel .svg{
+		width: 15px;
+	}
 }

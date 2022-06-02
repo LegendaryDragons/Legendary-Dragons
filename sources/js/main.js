@@ -6,6 +6,3 @@ menu_toggle.onclick = function(){
     menu_toggle.classList.toggle('active')
     menu.classList.toggle('responsive')
 }
-
-//Js Gallery
-var mixer = mixitup('.filter-container');
