@@ -351,6 +351,10 @@ hr{
         width: 30%;
         font-size: 8px;
     }
+	.universe h2, .world h2,
+    .races h2, .role h2{
+    font-size: 18px;
+    }
     .races>p,
     .roles>p{
         font-size: 12px;
@@ -383,10 +387,10 @@ hr{
         font-size: 0.8rem;
     }
     .roles .container-faq .questions .visible-pannel h3{
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
     .roles .container-faq .questions .visible-pannel .icon-role img{
-        height: 18px;
+        height: 16px;
     }
     .roles .container-faq .questions .visible-pannel .svg{
         width: 15px;
@@ -396,7 +400,7 @@ hr{
     }
     .roles .container-faq .questions .toggle-pannel .icon-job img{
         width: auto;
-        height: 20px;
+        height: 15px;
     }
     .tribus .container-tribu .presentation-race{
 		text-align: justify;
