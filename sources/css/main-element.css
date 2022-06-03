@@ -2,19 +2,24 @@
 @import url("style.css");
 
 /* CSS MAIN-ELEMENTS */
+
+/* CSS menu boutton */
 .buttons{
-    margin: 50px 0;
+    margin: 50px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 80%;
     /* animation: Logo_animate 1.5s ease 1.6s 1 normal backwards; */
 }
 .buttons button{
-    margin: 0 5px;
-    padding: 10px;
+    margin: 5px;
+    width: 30%;
+    padding: 5px;
     background-color: var(--blue_color);
     transition: all 0.5s ease-in-out;
+    border: 1px solid transparent
 }
 .buttons button:hover{
     background-color: rgba(251, 54, 244, 0.7);
@@ -37,57 +42,82 @@
     text-align: justify;
     margin: 0 auto;
 }
+/* CSS WORLD */
 .universe, .world,
-.races, .role{
-    margin-top: 100px;
+.races, .roles, .tribus{
+    margin-top: 50px;
     width: 100%;
     padding: 0 30px;
 }
 .universe h2, .world h2,
-.races h2, .role h2{
+.races h2, .roles h2, .tribus h2{
     margin-bottom : 20px;
     text-decoration: underline;
     color: var(--blue_color);
+    font-size: 24px;
 }
 .world .container-world{
 	display: flex;
 	flex-direction: column;
 }
-.world .container-world .content{
+.world .container-world .content-world{
 	margin: 30px 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
-.world .container-world .content h3{
-	text-align: center;
+.world .container-world .content-world h3{
 	margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: underline;
 }
-.world .container-world .content img{
-	width: 60%;
+.world .container-world .right{
+    text-align: right;
+}
+.world .container-world .content-world .article{
+	display: flex;
+	align-items: center;
+    flex-direction: column;
+}
+.world .container-world .content-world .article img{
+	width: 90%;
 	margin: 0 auto;
 	margin-bottom: 30px;
+	box-shadow: 5px 5px 10px -1px #fff
 }
-.world .content p{
+.world .container-world .content-world .article .article-content{
+    padding-left: 30px;
+}
+.world .container-world .content-world .article p{
 	text-align: justify;
+	font-size: 0.95rem;
+	padding: 7px 15px;
 }
-.presentation-class{
-	margin-bottom: 50px;
+hr{
+	height: 3px;
+    width: 90%;
+	margin: 40px auto;
+	text-align: center;
+    background-color: rgb(211,211,211, 0.5);
+    border:none;
 }
-.container-race{
+/* CSS RACE */
+.races .container-race{
 	margin-top: 50px;
 }
-.container-race h3{
+.races .container-race h3{
+    text-align: center;
 	text-decoration: underline;
 }
-.container{
+.races .container-card{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	width: 80%;
-	margin: 0 auto;
+	margin: 30px auto;
 }
-.card{
+.races .container-card .card{
 	position: relative;
 	width: 300px;
 	height: 500px;
@@ -99,11 +129,11 @@
 	box-shadow: inset 300px 0 50px rgba(0, 0, 0, .15), 0 20px 20px rgba(0, 0, 0, .15);
 	margin-bottom: 50px;
 }
-.card:hover{
+.races .container-card .card:hover{
 	transform: perspective(2000px) translateX(50%);
 	box-shadow: inset 20px 0 50px rgba(0, 0, 0, .15), 0 10px 10px rgba(0, 0, 0, .15);
 }
-.card .cover{
+.races .container-card .card .cover{
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -117,17 +147,25 @@
 	transition: 1s ease-in-out;
 	transform-origin: left;
 }
-.card .cover p{
+.races .container-race .container-card .card .cover img{
+	width: auto;
+	height: 80%;
+	z-index: 1;
+}
+.races .container-race .container-card .card .cover .lalafell{
+	height: 60%;
+}
+.races .container-card .card .cover p{
 	position: relative;
 	top: 230px;
 	right: 10px;
 	width: 100px;
 	font-size: 12px;
 }
-.card:hover .cover{
+.races .container-card .card:hover .cover{
 	transform: rotateY(-180deg);
 }
-.card .cover::before{
+.races .container-card .card .cover::before{
 	content: "";
 	position: absolute;
 	width: 10px;
@@ -138,20 +176,12 @@
 	transition: 0.5s;
 	transition-delay: 1s;
 }
-.card:hover .cover::before{
+.races .container-card .card:hover .cover::before{
 	width: 0;
 	box-shadow: 0 0 0 250px #47bfce;
 	transform: rotate(143.5deg);
 }
-.card .cover img{
-	width: auto;
-	height: 80%;
-	z-index: 1;
-}
-.card .cover .lalafell{
-	height: 60%;
-}
-.card .details{
+.races .container-card .card .details{
 	position: absolute;
 	top: 0; left: 0;
 	width: 100%;
@@ -163,22 +193,22 @@
 	text-align: center;
 	z-index: 1;
 }
-.card .details h3{
+.races .container-card .card .details h3{
 	text-decoration: underline;
+    font-weight: 500;
+	margin: 5px 0;
+	color: black;
 }
-.card .details p{
+.races .container-card .card .details p{
 	text-align: justify;
 	padding: 10px;
 	color: black;
 	font-size: 0.8em;
 }
-.card .details h3{
-	font-weight: 500;
-	margin: 5px 0;
-	color: black;
-}
-.container-faq{
-	width: 70%;
+
+/* CSS ROLE */
+.roles .container-faq{
+	width: 90%;
 	height: auto;
 	margin: 30px auto;
 	display: flex;
@@ -186,12 +216,12 @@
 	justify-content: center;
 	align-items: flex-start;
 }
-.questions{
+.roles .container-faq .questions{
 	width: 100%;
 	height: auto;
 	margin: 5px;
 }
-.visible-pannel{
+.roles .container-faq .questions .visible-pannel{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -200,66 +230,88 @@
 	position: relative;
 	z-index: 100;
 }
-.visible-pannel h3{
+.roles .container-faq .questions .visible-pannel h3{
 	margin-left: 5px;
-	/* padding: 15px 5px; */
-	font-size: 25px;
+	font-size: 20px;
 	color: black;
 }
-.visible-pannel .icon-role{
+.roles .container-faq .questions .visible-pannel .icon-role{
 	display: flex;
 	align-items: center;
 }
-.visible-pannel .icon-role img{
+.roles .container-faq .questions .visible-pannel .icon-role img{
 	width: auto;
-	height: 30px;
+	height: 25px;
 	padding-left: 5px;
 }
-.visible-pannel .svg{
+.roles .container-faq .questions .visible-pannel .svg{
 	margin-right: 10px;
-	width: 25px;
+	width: 20px;
 	cursor: pointer;
 }
-.toggle-pannel{
+.roles .container-faq .questions .toggle-pannel{
 	padding: 0 15px;
 	height: 0;
 	opacity: 0;
-	/* background-color: #bebebe; */
 }
-.toggle-pannel p{
+.roles .container-faq .questions .toggle-pannel p{
 	line-height: 1.5;
+    text-align: justify;
+    font-size: 0.9rem;
 }
-.sub-cat{
-	display: flex;
-	align-items: center;
-	margin: 10px 0;
-}
-.sub-cat img{
-	width: auto;
-	height: 30px;
-}
-.sub-cat h4{
-	padding-left: 5px;
-}
-h5{
-	margin: 10px 0;
+.roles .container-faq .questions .toggle-pannel h5{
+    margin: 10px 0;
 	text-decoration: underline;
 	letter-spacing: 1px;
 	font-weight: 400;
 }
-.icon-job{
-	margin-bottom: 20px;
+.roles .container-faq .questions .toggle-pannel .icon-job{
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
 }
-.icon-job img{
+.roles .container-faq .questions .toggle-pannel .icon-job img{
+	width: auto;
+	height: 30px;
+}
+.roles .container-faq .questions .toggle-pannel .sub-cat{
+	display: flex;
+	align-items: center;
+}
+.roles .container-faq .questions .toggle-pannel .sub-cat h4{
+    padding-left: 5px;
+}
+.roles .container-faq .questions .toggle-pannel .sub-cat  img{
 	width: auto;
 	height: 30px;
 }
 
+/* CSS TRIBU */
+.tribus .container-tribu{
+	margin-top: 50px;
+}
+.tribus .container-tribu h3{
+    text-align: center;
+	text-decoration: underline;
+}
+.tribus .container-tribu{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 80%;
+	margin: 30px auto;
+}
 
 
-
-
-
+/* CSS RESPONSIVE */
+@media (max-width:1100px){
+    .container-card{
+		width: 100%;
+		margin: 10px;
+		margin-bottom: 30px;
+		flex-direction: column;
+	}
+}
 @media (max-width:900px){
     body{
 		z-index: 100;
@@ -274,58 +326,99 @@ h5{
     .title_main .paragraph{
         font-size: 12px;
     }
-	.universe h2{
-		font-size: 20px;
-	}
-	.container .card{
-		margin-top: 50px;
-	} 
-}
-
-@media (max-width:600px){
-	.container-race h3{
-		text-align: center;
-	}
-	.container-race .presentation-class{
-		text-align: justify;
-		font-size: 0.8rem;
-	}
-	.presentation-class{
-		margin-bottom: 10px;
-	}
-	.container{
-		width: 100%;
-		margin: 10px;
+    .universe h2, .world h2,
+    .races h2, .role h2{
+    font-size: 20px;
+    }
+    .world .container-world .content-world .article .article-content p{
+        font-size: 12px;
+    }
+    .world .container-world .content-world .article .article-content{
+        padding-left: 0;
+    }
+    .races .container-card{
+		width: 100%; 
 		margin-bottom: 30px;
 		flex-direction: column;
 	}
-	.card{
-		width: 150px;
+}
+
+@media (max-width:700px){
+    .buttons{
+        width: 90%;
+    }
+    .buttons button{
+        width: 30%;
+        font-size: 8px;
+    }
+    .races>p,
+    .roles>p{
+        font-size: 12px;
+        text-align: justify;
+    }
+    .races .container-race .presentation-race{
+		text-align: justify;
+		font-size: 0.8rem;
+        margin-bottom: 10px;
+	}
+    .races .container-race .container-card .card{
+		width: 170px;
 		height: 400px;
-		margin: 0 auto;
+		margin: 20px auto;
 	}
-	.card .cover img{
-		height: 50%;
+    .races .container-race .container-card .card .cover img{
+		height: 55%;
 	}
-	.card .cover .lalafell{
-		height: 40%;
-	}
-	.card .details h3{
+    .races .container-race .container-card .card .details h3{
 		font-size: 0.8rem;
+        margin-top: 20px;
 	}
-	.card .details p{
-		font-size: 0.6rem;
-	}
-	.toggle-pannel p{
+    .races .container-race .container-card .card .details p{
+        font-size: 0.6rem;
+    }
+    .races .container-race .container-card .card .cover .lalafell{
+        height: 40%;
+    }
+    .roles .container-faq .questions .toggle-pannel p{
+        font-size: 0.8rem;
+    }
+    .roles .container-faq .questions .visible-pannel h3{
+        font-size: 0.9rem;
+    }
+    .roles .container-faq .questions .visible-pannel .icon-role img{
+        height: 18px;
+    }
+    .roles .container-faq .questions .visible-pannel .svg{
+        width: 15px;
+    }
+    .roles .container-faq .questions .toggle-pannel .sub-cat h4{
+        font-size: 0.7rem;
+    }
+    .roles .container-faq .questions .toggle-pannel .icon-job img{
+        width: auto;
+        height: 20px;
+    }
+    .tribus .container-tribu .presentation-race{
+		text-align: justify;
 		font-size: 0.8rem;
+        margin-bottom: 10px;
 	}
-	.icon-role h3{
-		font-size: 0.9rem;
+    .tribus .container-tribu .container-card .card{
+		width: 170px;
+		height: 400px;
+		margin: 20px auto;
 	}
-	.visible-pannel .icon-role img{
-		height: 18px;
+    .tribus .container-tribu .container-card .card .cover img{
+		height: 55%;
 	}
-	.visible-pannel .svg{
-		width: 15px;
+    .tribus .container-tribu .container-card .card .details h3{
+		font-size: 0.8rem;
+        margin-top: 20px;
 	}
+    .tribus .container-tribu .container-card .card .details p{
+        font-size: 0.6rem;
+    }
+    .tribus .container-tribu .container-card .card .cover .lalafell{
+        height: 40%;
+    }
 }
