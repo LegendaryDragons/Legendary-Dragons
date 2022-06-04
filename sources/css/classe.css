@@ -1,0 +1,223 @@
+/* Import CSS */
+@import url("style.css");
+
+/* CSS MAIN-ELEMENTS */
+
+/* CSS menu boutton */
+.buttons{
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    /* animation: Logo_animate 1.5s ease 1.6s 1 normal backwards; */
+}
+.buttons button{
+    margin: 5px;
+    width: 30%;
+    padding: 5px;
+    background-color: var(--blue_color);
+    transition: all 0.5s ease-in-out;
+    border: 1px solid transparent
+}
+.buttons button:hover{
+    background-color: rgba(251, 54, 244, 0.7);
+}
+.buttons .active{
+    background-color: rgba(251, 54, 244, 0.7);
+}
+.main .title_main{
+    padding-top: 50px;
+	/* animation: Title_animate 1.5s ease 2.5s 1 normal backwards; */
+}
+.main .title_main h1{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.title_main .paragraph{
+    width: 50%;  
+    color: #fff;
+    text-align: justify;
+    margin: 0 auto;
+}
+.job{
+    margin-top: 50px;
+    width: 100%;
+    padding: 0 30px;
+}
+.job h2{
+    margin-bottom : 20px;
+    text-decoration: underline;
+    color: var(--blue_color);
+    font-size: 24px;
+}
+.job h3{
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.content-job{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.card{
+    margin: 30px 0;
+    width: 350px;
+    height: 550px;
+    perspective: 1000px;
+}
+.card__inner{
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+.card__inner.is-flipped{
+    transform: rotateY(180deg);
+}
+.card__face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+.card__face--frontT, .card__face--frontH, .card__face--frontD{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card__face--frontT{
+    background-color: #475ece;
+}
+.card__face--frontH{
+    background-color: #427134;
+}
+.card__face--frontD{
+    background-color: #7f3a3b;
+}
+.card__face--back {
+    background-color: var(--white_color);
+    transform: rotateY(180deg);
+}
+.card__content {
+    width: 100%;
+    height: 100%;
+}
+.card__headerT, .card__headerH, .card__headerD {
+    position: relative;
+    padding: 15px 15px 25px;
+}
+.card__headerT:after, .card__headerH:after, .card__headerD:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; bottom: 0; 
+    right: 0; left: 0;
+    z-index: -1;
+    border-radius: 0 0 50% 0;
+}
+.card__headerT:after{
+    background-color: #475ece;
+}
+.card__headerH:after{
+    background-color: #427134;
+}
+.card__headerD:after{
+    background-color: #7f3a3b;
+}
+.pp{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    background-color: var(--white_color);
+    border: 5px solid var(--white_color);
+    object-fit: cover;
+}
+.card__headerT h4,.card__headerH h4, .card__headerD h4{
+    color: var(--white_color);
+    font-size: 25px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+.card__body{
+    padding: 30px;
+}
+.card__body p{
+    color: #212121;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: justify;
+}
+.card__body p span{
+    font-weight: 800;
+    color: #212121;
+}
+
+
+
+
+
+
+@media (max-width:900px){
+    body{
+		z-index: 100;
+		}
+	.main{
+		position: relative;
+		z-index: -99;
+	}
+	.main .title_main h1{
+		font-size: 25px;
+	}
+    .title_main .paragraph{
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width:700px){
+    .buttons{
+        width: 90%;
+    }
+    .buttons button{
+        width: 30%;
+        font-size: 8px;
+    }
+    .job h2{
+        font-size: 18px;
+    }
+    .card {
+        width: 250px;
+        height: 500px;
+        perspective: 1000px;
+    }
+    .pp {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 10px;
+    }
+    .card__header {
+        position: relative;
+        padding: 15px 15px 25px;
+    }
+    .card__header h2 {
+        font-size: 20px;
+    }
+    .card__body p {
+        font-size: 11px;
+    }
+}
