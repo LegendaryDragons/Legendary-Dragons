@@ -11,7 +11,7 @@
     align-items: center;
     flex-wrap: wrap;
     width: 80%;
-    /* animation: Logo_animate 1.5s ease 1.6s 1 normal backwards; */
+    animation: Logo_animate 1.5s ease 1.6s 1 normal backwards;
 }
 .buttons button{
     margin: 5px;
@@ -29,7 +29,7 @@
 }
 .main .title_main{
     padding-top: 50px;
-	/* animation: Title_animate 1.5s ease 2.5s 1 normal backwards; */
+	animation: Title_animate 1.5s ease 2.5s 1 normal backwards;
 }
 .main .title_main h1{
     font-size: 40px;
@@ -46,6 +46,7 @@
     margin-top: 50px;
     width: 100%;
     padding: 0 30px;
+    animation: Logo_animate 1.5s ease 3s 1 normal backwards;
 }
 .job h2{
     margin-bottom : 20px;
