@@ -58,7 +58,7 @@ function mountTemplate(mount){
         <div class="animal">
             <img class="pet-photo" src="${mount.image}">
             <h3 class="pet-name">${mount.nom}</h3>
-            <p>${mount.obtention}</p>
+            <p class="obtention">${mount.obtention}</p>
         </div>
     `
 }
