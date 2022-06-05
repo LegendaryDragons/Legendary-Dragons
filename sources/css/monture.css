@@ -1,0 +1,246 @@
+/* Import CSS */
+@import url("style.css");
+
+/* CSS MAIN-ELEMENTS */
+
+/* CSS menu boutton */
+.buttons{
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    animation: Logo_animate 1.5s ease 1.6s 1 normal backwards;
+}
+.buttons button{
+    margin: 5px;
+    width: 30%;
+    padding: 5px;
+    background-color: var(--blue_color);
+    transition: all 0.5s ease-in-out;
+    border: 1px solid transparent
+}
+.buttons button:hover{
+    background-color: rgba(251, 54, 244, 0.7);
+}
+.buttons .active{
+    background-color: rgba(251, 54, 244, 0.7);
+}
+.main .title_main{
+    padding-top: 50px;
+	/* animation: Title_animate 1.5s ease 2.5s 1 normal backwards; */
+}
+.main .title_main h1{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.title_main .paragraph{
+    width: 50%;  
+    color: #fff;
+    text-align: justify;
+    margin: 0 auto;
+}
+.mount{
+    margin-top: 50px;
+    width: 100%;
+    padding: 0 30px;
+    /* animation: Logo_animate 1.5s ease 3s 1 normal backwards; */
+}
+.mount h2{
+    margin-bottom : 20px;
+    text-decoration: underline;
+    color: var(--blue_color);
+    font-size: 24px;
+}
+.content-mount{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.roles .container-faq{
+	width: 90%;
+	height: auto;
+	margin: 30px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+.roles .container-faq .questions{
+	width: 100%;
+	height: auto;
+	margin: 5px;
+}
+.roles .container-faq .questions .visible-pannel{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #f1f1f1;
+	border-radius: 10px;
+	position: relative;
+	z-index: 100;
+}
+.roles .container-faq .questions .visible-pannel h3{
+	margin-left: 5px;
+	font-size: 20px;
+	color: black;
+}
+.roles .container-faq .questions .visible-pannel .icon-role{
+	display: flex;
+	align-items: center;
+}
+.roles .container-faq .questions .visible-pannel .icon-role img{
+	width: auto;
+	height: 25px;
+	padding-left: 5px;
+}
+.roles .container-faq .questions .visible-pannel .svg{
+	margin-right: 10px;
+	width: 20px;
+	cursor: pointer;
+}
+.roles .container-faq .questions .toggle-pannel{
+	padding: 0 15px;
+	height: 0;
+	opacity: 0;
+}
+.roles .container-faq .questions .toggle-pannel p{
+	line-height: 1.5;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+.roles .container-faq .questions .toggle-pannel h5{
+    margin: 10px 0;
+	text-decoration: underline;
+	letter-spacing: 1px;
+	font-weight: 400;
+}
+.roles .container-faq .questions .toggle-pannel .icon-job{
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+}
+.roles .container-faq .questions .toggle-pannel .icon-job img{
+	width: auto;
+	height: 30px;
+}
+.roles .container-faq .questions .toggle-pannel .sub-cat{
+	display: flex;
+	align-items: center;
+}
+.roles .container-faq .questions .toggle-pannel .sub-cat h4{
+    padding-left: 5px;
+}
+.roles .container-faq .questions .toggle-pannel .sub-cat  img{
+	width: auto;
+	height: 30px;
+}
+.animal{
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pet-photo {
+    float: left;
+    margin-right: 15px;
+    max-width: 100%;
+    height: auto;
+}
+.pet-name {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 0 0 1rem 0;
+    width: 30%;
+    color: black;
+    text-align: left;
+}
+.animal p{
+    width: 30%;
+    color: black;
+    padding: 10px;
+    text-align: justify;
+} 
+
+
+
+
+
+
+
+@media (max-width:900px){
+    body{
+		z-index: 100;
+		}
+	.main{
+		position: relative;
+		z-index: -99;
+	}
+	.main .title_main h1{
+		font-size: 25px;
+	}
+    .title_main .paragraph{
+        font-size: 12px;
+    }
+    .universe h2, .world h2,
+    .races h2, .role h2{
+    font-size: 20px;
+    }
+    .world .container-world .content-world .article .article-content p{
+        font-size: 12px;
+    }
+    .world .container-world .content-world .article .article-content{
+        padding-left: 0;
+    }
+    .races .container-card{
+		width: 100%; 
+		margin-bottom: 30px;
+		flex-direction: column;
+	}
+}
+
+@media (max-width:700px){
+    .buttons{
+        width: 90%;
+    }
+    .buttons button{
+        width: 30%;
+        font-size: 8px;
+    }
+	.mount h2{
+    font-size: 18px;
+    }
+    .mount>p{
+        font-size: 12px;
+        text-align: justify;
+    }
+    .roles .container-faq .questions .toggle-pannel p{
+        font-size: 0.8rem;
+    }
+    .roles .container-faq .questions .visible-pannel h3{
+        font-size: 0.7rem;
+    }
+    .roles .container-faq .questions .visible-pannel .icon-role img{
+        height: 16px;
+    }
+    .roles .container-faq .questions .visible-pannel .svg{
+        width: 15px;
+    }
+    .roles .container-faq .questions .toggle-pannel .sub-cat h4{
+        font-size: 0.7rem;
+    }
+    .roles .container-faq .questions .toggle-pannel .icon-job img{
+        width: auto;
+        height: 15px;
+    }
+}
